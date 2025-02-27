@@ -25,6 +25,8 @@ const createDivs = (gridSize) => {
 const handleBoxes = (boxes) => {
   boxes.forEach((box) => {
     box.addEventListener("mouseover", () => {
+      //alternatively add background color to box
+      // box.style.backgroundColor = `rgb(${initialRed}, ${initialGreen}, ${initialBlue})`;
       box.classList.add("hovered");
       // change box colors
       document.documentElement.style.setProperty(
