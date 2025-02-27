@@ -1,17 +1,37 @@
+/* variables */
+:root {
+    --gridSize: 16;
+}
+
 * {
     box-sizing: border-box;
+}
+
+.form-container {
+    margin: 10px auto;
+    width: 960px;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: 960px;
     margin: 0 auto;
 }
 
 .box {
-    flex: 1 0 calc(100% / 16);
+    flex: 1 0 calc(100% / var(--gridSize));
     aspect-ratio: 1 / 1;
     background-color: orange;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+/* .box:hover {
+    background-color: red;
+} */
+
+.hovered {
+    background-color: red;
 }
