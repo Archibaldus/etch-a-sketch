@@ -1,5 +1,8 @@
 // const variables
 const initialGrid = 256;
+let initialRed = 255;
+let initialGreen = 102;
+let initialBlue = 0;
 
 // create divs
 const createDivs = (gridSize) => {
@@ -23,6 +26,14 @@ const handleBoxes = (boxes) => {
   boxes.forEach((box) => {
     box.addEventListener("mouseover", () => {
       box.classList.add("hovered");
+      // change box colors
+      document.documentElement.style.setProperty(
+        "--boxColor",
+        `rgb(${initialRed}, ${initialGreen}, ${initialBlue})`
+      );
+      initialRed < 255 ? (initialRed += 1) : (initialRed = 0);
+      initialGreen < 255 ? (initialGreen += 1) : (initialGreen = 0);
+      initialBlue < 255 ? (initialBlue += 1) : (initialBlue = 0);
     });
   });
 };
